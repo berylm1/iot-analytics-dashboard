@@ -37,7 +37,58 @@ A real-time IoT analytics platform built with **Go**, **Apache Kafka**, and **Re
 ```
 
 ## 🚀 Quick Start
+## 🤖 Automated Scripts
 
+### One-Command Setup
+```bash
+# Complete setup (installs dependencies, starts Kafka)
+./scripts/setup.sh
+```
+
+### Using Makefile
+```bash
+# See all available commands
+make help
+
+# Install dependencies
+make install
+
+# Start Kafka
+make kafka-up
+
+# Run individual services
+make producer      # Terminal 1
+make aggregator    # Terminal 2
+make api           # Terminal 3
+make frontend      # Terminal 4
+
+# Check service status
+make status
+
+# Run all backend services at once
+make all
+
+# Run tests
+make test
+
+# Stop Kafka
+make kafka-down
+```
+
+### Helper Scripts
+```bash
+# Complete automated setup
+./scripts/setup.sh
+
+# Check all service status
+./scripts/check-status.sh
+
+# Test API endpoints
+./scripts/test-api.sh
+
+# Start all services (requires tmux)
+./scripts/start-all.sh
+```
 ### Prerequisites
 
 - [Go 1.21+](https://golang.org/dl/)
